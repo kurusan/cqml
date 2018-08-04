@@ -55,8 +55,7 @@ public class HistoryControler {
 		}
 	//
 		tableview.setItems(tabData);
-		tabData.forEach(tab->{
-			System.out.println(tab.getDte()+" "+tab.getSolution()+" "+tab.getEqu());
+		tabData.forEach(tab->{ System.out.println(tab.getDte()+" "+tab.getSolution()+" "+tab.getEqu());
 		});
 		
 	}
