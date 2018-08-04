@@ -18,13 +18,14 @@ import javafx.scene.layout.BorderPane;
  * Ecrit en javaFx
  */
 public class Main extends Application {
+
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("MainScene.fxml"));
 			Controller controleur= new Controller();
 			loader.setController(controleur);
 			Parent root = loader.load();
-			primaryStage.setTitle("Application de resolution équation 2nd degré dans R");
+			primaryStage.setTitle("Application de resolution ï¿½quation 2nd degrï¿½ dans R");
 			primaryStage.setScene(new Scene(root,840,600));
 			primaryStage.show();
 	}
