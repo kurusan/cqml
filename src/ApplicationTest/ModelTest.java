@@ -7,8 +7,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Date;
 
 /** 
  * Dans cette classe nous allons tester la connexion a la base de donnée
@@ -30,7 +32,7 @@ public class ModelTest {
     public void avantTest(){
         model = Model.getInstance();
         //on verifie si l'instance est null
-        Assert.assertNotNull("Le model est null ",model);
+        //Assert.assertNotNull("Le model est null ",model);
     }
 
     /**
@@ -58,9 +60,12 @@ public class ModelTest {
         }
     }
 
+    /**
+     * Ici on verifie si la requette est correctement inserer
+     */
     @Test
     public void insertTest(){
-
+        Assert.assertTrue(model.insertStatement("2x2a+3b+c","2",new Date()));
     }
 	
 }
