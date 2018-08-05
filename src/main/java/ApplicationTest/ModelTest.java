@@ -4,6 +4,7 @@ import application.Model;
 
 import org.junit.Assert;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 
@@ -25,13 +26,13 @@ public class ModelTest {
     private Model model;
 
     /**
-     * Cette fonction est appele avanttous les autres test on y instancie le model a tester
+     * Cette fonction est appele avant tous les autres test on y instancie le model a tester
      */
-    @Before
+    @BeforeClass
     public void avantTest(){
         model = Model.getInstance();
         //on verifie si l'instance est null
-        //Assert.assertNotNull("Le model est null ",model);
+        Assert.assertNotNull("Le model est null ",model);
     }
 
     /**
@@ -64,7 +65,7 @@ public class ModelTest {
      */
     @Test
     public void insertTest(){
-        //Assert.assertTrue(model.insertStatement("2x2a+3b+c","2",new Date()));
+        Assert.assertNotNull(model.insertStatement("2x2a+3b+c","2",new Date()));
     }
 	
 }
